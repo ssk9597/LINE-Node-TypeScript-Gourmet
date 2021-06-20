@@ -1,7 +1,7 @@
 // Load the package
 import { TemplateMessage } from '@line/bot-sdk';
 
-export const TransportationMessage = (): TemplateMessage => {
+export const TransportationTemplate = (): TemplateMessage => {
   return {
     type: 'template',
     altText: '移動手段は何ですか？',

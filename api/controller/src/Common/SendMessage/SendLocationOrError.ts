@@ -19,6 +19,8 @@ export const sendLocationOrError = async (client: Client, event: WebhookEvent): 
     // Perform a conditional branch
     if (text === 'お店を探す') {
       await client.replyMessage(replyToken, yourLocationTemplate());
+    } else if (text === '徒歩です' || text === '車です') {
+      return;
     } else {
       await client.replyMessage(replyToken, errorMessageTemplate());
     }
