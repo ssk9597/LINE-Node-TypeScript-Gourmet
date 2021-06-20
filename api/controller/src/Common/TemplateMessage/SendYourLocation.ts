@@ -1,4 +1,7 @@
-export const SendYourLocation = () => {
+// Load the package
+import { TemplateMessage } from '@line/bot-sdk';
+
+export const SendYourLocation = (): TemplateMessage => {
   return {
     type: 'template',
     altText: '現在地を送ってください！',
