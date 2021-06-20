@@ -4,6 +4,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
 
+// Load the module
+import { sendLocationOrError } from './Common/SendMessage/SendLocationOrError';
+
 // Read the ports from process.env.file
 const PORT = process.env.PORT || 3000;
 
@@ -37,6 +40,7 @@ app.post(
     events.map(
       async (event: WebhookEvent): Promise<void> => {
         try {
+          await sendLocationOrError(client, event);
           console.log(event);
         } catch (err) {
           console.log(err);

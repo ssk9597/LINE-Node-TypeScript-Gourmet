@@ -4,7 +4,7 @@
   "description": "",
   "main": "api/controller/dist/index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn .",
+    "dev": "ts-node-dev --respawn api/controller/src/index.ts",
     "clean": "rimraf dist",
     "tsc": "tsc",
     "build": "npm-run-all clean tsc",
