@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/ssk9597/LINE-Node-TypeScript-Gourmet#readme",
   "dependencies": {
-    "@googlemaps/google-maps-services-js": "^3.1.16",
     "@line/bot-sdk": "^7.3.0",
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",

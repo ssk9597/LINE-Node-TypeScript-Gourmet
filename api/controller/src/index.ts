@@ -4,10 +4,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import axios, { AxiosResponse } from 'axios';
-
 // Load the module
 import { sendLocationOrError } from './Common/SendMessage/SendLocationOrError';
+import { sendGourmetMessage } from './Common/SendMessage/SendGourmetMessage';
 
 // Read the ports from process.env.file
 const PORT = process.env.PORT || 3000;
@@ -43,11 +42,9 @@ app.post(
       async (event: WebhookEvent): Promise<void> => {
         try {
           await sendLocationOrError(client, event);
+          await sendGourmetMessage(client, event);
 
-          // const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=food&key=${process.env.GOOGLE_DEV_API}`;
-          // const data = await axios.get(url);
-          // console.log(data);
-          console.log(event);
+          // console.log(event);
         } catch (err) {
           console.log(err);
         }
