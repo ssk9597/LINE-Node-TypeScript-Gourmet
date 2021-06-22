@@ -6,8 +6,11 @@ export const getGourmetInfo = async (latitude: number, longitude: number) => {
     // Google Map API
     const Google_API = process.env.GOOGLE_DEV_API;
 
-    const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=5000&type=restaurant&key=${Google_API}&language=ja`;
+    const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=800&type=restaurant&key=${Google_API}&language=ja`;
     const gourmets: AxiosResponse<any> = await axios.get(url);
+    const gourmetData = gourmets.data.results;
+
+    return gourmetData;
   } catch (err) {
     console.log(err);
   }
