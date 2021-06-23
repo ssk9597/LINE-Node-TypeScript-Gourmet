@@ -49,4 +49,4 @@ https://line-node-typescript-gourmet.glitch.me
 
 ## 友達追加はこちらからどうぞ
 
-![名称未設定.png](https://qr-official.line.me/sid/L/407vochs.png)
+![407vochs](https://user-images.githubusercontent.com/70458379/123104961-5dccdf80-d472-11eb-8cbe-123747afaea5.png)
