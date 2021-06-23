@@ -21,7 +21,7 @@ export const createFlexMessage = async (
     // FlexMessage
     const FlexMessageContents: FlexBubble[] = await sortGourmetData.map((gourmet: Gourmet) => {
       // Google Map API
-      const Google_API = process.env.GOOGLE_DEV_API || undefined;
+      const Google_API = process.env.GOOGLE_PROD_API || undefined;
 
       // Create a URL for a store photo
       const photoURL = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${gourmet.photo_reference}&key=${Google_API}`;
