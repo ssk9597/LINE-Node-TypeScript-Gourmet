@@ -2,9 +2,9 @@
   "name": "gourmet",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/controller/dist/index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn api/src/index.ts",
+    "dev": "ts-node-dev --respawn api/controller/src/index.ts",
     "clean": "rimraf dist",
     "tsc": "tsc",
     "build": "npm-run-all clean tsc",
